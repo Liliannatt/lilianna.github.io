@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/echarts.min.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      // Use axis to trigger tooltip
+      type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+    }
+  },
+  legend: {},
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: {
+    type: 'value'
+  },
+  yAxis: {
+    type: 'category',
+    data: [
+      'Information Visualization',
+      'Statistical',
+      'Mathematics',
+      'Drawing and Artistic',
+      'Computer Usage',
+      'Programming',
+      'Computer Graphics Programming',
+      'Human-computer Interaction Programming',
+      'User Experience Evaluation',
+      'Communication',
+      'Collaboration',
+      'Code Repository'
+    ]
+  },
+  series: [
+    {
+      name: 'ramranch',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 2, 3, 10, 8, 5, 5, 6, 4, 1, 1, 5]
+    },
+    {
+      name: 'Caterpillar Fungus',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 2, 2, 2, 8, 4, 3, 4, 3, 6, 8, 8]
+    },
+    {
+      name: 'tjsol',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [5, 3, 3, 8, 9, 7, 2, 3, 6, 4, 6, 10]
+    },
+    {
+      name: 'Rookie9',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [5, 5, 6, 4, 6, 5, 4, 5, 5, 5, 7, 4]
+    },
+    {
+      name: 'matcha',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 3, 6, 5, 5, 3, 2, 3, 3, 8, 8, 3]
+    },
+    {
+      name: 'Flower',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 3, 3, 8, 8, 5, 1, 3, 10, 10, 10, 8]
+    },
+    {
+      name: 'Bebocchia',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [8, 6, 8, 1, 5, 5, 7, 5, 5, 9, 9, 5]
+    },
+    {
+      name: 'stellarise',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [6, 6, 4, 6, 8, 8, 8, 7, 5, 8, 8, 7]
+    },
+    {
+      name: 'Kakka',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [1, 3, 5, 1, 8, 8, 3, 5, 4, 9, 9, 9]
+    },
+    {
+      name: 'Beowulf',
+      type: 'bar',
+      stack: 'total',
+      color: '#d5bfa5',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [6, 3, 3, 9, 8, 8, 7, 9, 6, 9, 10, 7]
+    },
+    {
+      name: 'BirdMaster',
+      type: 'bar',
+      stack: 'total',
+      color: '#9c9f75',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [4, 6, 6, 3, 7, 6, 3, 7, 7, 7, 7, 6]
+    },
+    {
+      name: 'SargeSmoke',
+      type: 'bar',
+      stack: 'total',
+      color: '#5f9228',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [7, 5, 5, 5, 6, 6, 1, 3, 3, 7, 7, 7]
+    },
+    {
+      name: 'Weissach',
+      type: 'bar',
+      stack: 'total',
+      color: '#0c608e',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 3, 6, 4, 6, 4, 1, 1, 1, 8, 7, 2]
+    },
+    {
+      name: 'Croco',
+      type: 'bar',
+      stack: 'total',
+      color: '#f5d68f',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [6, 6, 6, 7, 2, 2, 8, 2, 2, 7, 8, 5]
+    },
+    {
+      name: 'w',
+      type: 'bar',
+      stack: 'total',
+      color: '#f883c2',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [6, 6, 5, 2, 7, 6, 2, 3, 3, 6, 6, 7]
+    },
+    {
+      name: 'kattmat',
+      type: 'bar',
+      stack: 'total',
+      color: '#a3758b',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [4, 3, 3, 10, 8, 5, 1, 8, 8, 8, 8, 4]
+    },
+    {
+      name: 'tofu',
+      type: 'bar',
+      stack: 'total',
+      color: '#ff006c',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 2, 5, 7, 8, 7, 4, 7, 8, 9, 9, 7]
+    },
+    {
+      name: 'gallopinto',
+      type: 'bar',
+      stack: 'total',
+      color: '#7a560e',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 5, 5, 3, 6, 5, 4, 7, 4, 10, 10, 8]
+    },
+    {
+      name: 'numpy',
+      type: 'bar',
+      stack: 'total',
+      color: '#bad7ae',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [5, 9, 6, 7, 8, 7, 1, 1, 2, 7, 7, 10]
+    },
+    {
+      name: 'Kanelbulle',
+      type: 'bar',
+      stack: 'total',
+      color: '#ac839c',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 5, 9, 7, 7, 3, 2, 4, 2, 8, 2, 2]
+    },
+    {
+      name: 'sackboy',
+      type: 'bar',
+      stack: 'total',
+      color: '#4fb3a9',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [1, 1, 6, 3, 8, 3, 3, 2, 1, 8, 9, 6]
+    },
+    {
+      name: 'blackcat',
+      type: 'bar',
+      stack: 'total',
+      color: '#006b64',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [6, 5, 5, 6, 4, 3, 4, 1, 1, 7, 6, 2]
+    },
+    {
+      name: 'Shadowheart',
+      type: 'bar',
+      stack: 'total',
+      color: '#ffa035',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [2, 1, 3, 6, 8, 5, 1, 5, 5, 9, 9, 7]
+    },
+    {
+      name: 'tpain',
+      type: 'bar',
+      stack: 'total',
+      color: '#d8d6d7',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 5, 4, 3, 7, 6, 6, 5, 2, 6, 7, 2]
+    },
+    {
+      name: 'ghostcat',
+      type: 'bar',
+      stack: 'total',
+      color: '#792445',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [6, 5, 5, 10, 10, 8, 5, 10, 5, 6, 3, 5]
+    },
+    {
+      name: 'cyan',
+      type: 'bar',
+      stack: 'total',
+      color: '#ebde31',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [1, 8, 5, 5, 7, 4, 4, 4, 3, 10, 10, 3]
+    },
+    {
+      name: 'BlenderBender',
+      type: 'bar',
+      stack: 'total',
+      color: '#b44b34',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [6, 2, 3, 6, 8, 8, 3, 8, 5, 9, 10, 8]
+    },
+    {
+      name: 'Windy65',
+      type: 'bar',
+      stack: 'total',
+      color: '#e98d5b',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [2, 8, 7, 4, 5, 4, 3, 5, 6, 8, 8, 7]
+    },
+    {
+      name: 'Bond, Jan Bond',
+      type: 'bar',
+      stack: 'total',
+      color: '#4488aa',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 3, 6, 8, 6, 5, 7, 3, 2, 6, 5, 7]
+    },
+    {
+      name: 'MGH552200',
+      type: 'bar',
+      stack: 'total',
+      color: '#243062',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [7, 5, 6, 4, 8, 8, 6, 8, 4, 7, 4, 8]
+    },
+    {
+      name: 'John Wick',
+      type: 'bar',
+      stack: 'total',
+      color: '#8aa56e',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 3, 4, 5, 6, 5, 4, 3, 3, 4, 5, 5]
+    },
+    {
+      name: 'YellowShyGuy',
+      type: 'bar',
+      stack: 'total',
+      color: '#c1ee13',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 7, 6, 4, 9, 8, 4, 7, 4, 8, 7, 7]
+    },
+    {
+      name: 'Sam Vimes',
+      type: 'bar',
+      stack: 'total',
+      color: '#c6174e',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 3, 4, 2, 6, 3, 1, 3, 2, 3, 5, 7]
+    },
+    {
+      name: 'Frieren',
+      type: 'bar',
+      stack: 'total',
+      color: '#8a7a6a',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [7, 6, 5, 8, 8, 7, 5, 5, 6, 6, 8, 9]
+    },
+    {
+      name: 'DiscoTechLola',
+      type: 'bar',
+      stack: 'total',
+      color: '#66537f',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [2, 2, 3, 4, 3, 3, 2, 4, 4, 10, 7, 3]
+    },
+    {
+      name: 'Aaron',
+      type: 'bar',
+      stack: 'total',
+      color: '#cde0e1',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [6, 6, 7, 8, 8, 6, 6, 7, 7, 6, 8, 8]
+    },
+    {
+      name: 'GGer',
+      type: 'bar',
+      stack: 'total',
+      color: '#e7e9e7',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 9, 5, 4, 8, 6, 2, 5, 5, 6, 9, 8]
+    },
+    {
+      name: 'Reisen',
+      type: 'bar',
+      stack: 'total',
+      color: '#43817a',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3, 5, 5, 7, 8, 5, 6, 3, 2, 4, 5, 3]
+    },
+    {
+      name: 'DrPavel',
+      type: 'bar',
+      stack: 'total',
+      color: '#d98a3f',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [4, 4, 7, 3, 8, 6, 5, 3, 5, 8, 9, 5]
+    },
+    {
+      name: 'SannyKuro',
+      type: 'bar',
+      stack: 'total',
+      color: '#dfabcd',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [5, 5, 6, 8, 9, 8, 9, 8, 7, 9, 8, 6]
+    },
+    {
+      name: 'Mintchoco',
+      type: 'bar',
+      stack: 'total',
+      color: '#787489',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [5, 6, 7, 1, 6, 7, 3, 3, 7, 8, 9, 6]
+    }
+  ]
+};
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
